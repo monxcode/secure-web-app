@@ -125,7 +125,7 @@ python -m venv venv
 source venv/bin/activate
 ```
 
-For Windows 👇🏻:
+   For Windows 👇🏻:
 
 ```bash
 venv\Scripts\activate
