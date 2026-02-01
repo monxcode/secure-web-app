@@ -118,33 +118,33 @@ mkdir secure-web-app
 cd secure-web-app
 ```
 
-1. Create virtual environment:
+2. Create virtual environment:
 
 ```bash
 python -m venv venv
 source venv/bin/activate  # On Windows: venv\Scripts\activate
 ```
 
-1. Install dependencies:
+3. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-1. Initialize the database:
+4. Initialize the database:
 
 ```bash
 python app.py
 # The app will create database.db with initial schema
 ```
 
-1. Run the application:
+5. Run the application:
 
 ```bash
 python app.py
 ```
 
-1. Access the application:
+6. Access the application:
 
 · Open browser: http://localhost:5000
 · Default admin credentials: admin / Admin@Secure123
