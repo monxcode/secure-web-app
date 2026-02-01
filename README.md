@@ -122,8 +122,11 @@ cd secure-web-app
 
 ```bash
 python -m venv venv
-source venv/bin/activate <br>
- **On Windows:** <br> venv\Scripts\activate
+source venv/bin/activate
+
+ On Windows: 👇🏻
+
+venv\Scripts\activate
 ```
 
 3. Install dependencies:
