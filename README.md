@@ -121,10 +121,16 @@ git clone https://github.com/monxcode/secure-web-app.git
 
 ```bash
 python -m venv venv
+```
+
+-> For Linux 👇🏻:
+
+```bash
 source venv/bin/activate
 ```
 
-   For Windows 👇🏻:
+
+-> For Windows 👇🏻:
 
 ```bash
 venv\Scripts\activate
