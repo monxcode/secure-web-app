@@ -266,7 +266,7 @@ Disclaimer
 
 This project is for educational purposes only. Always consult security professionals and conduct thorough penetration testing before deploying applications to production.
 
-```
+
 
 ## **Project Summary**
 
