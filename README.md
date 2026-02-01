@@ -123,9 +123,11 @@ cd secure-web-app
 ```bash
 python -m venv venv
 source venv/bin/activate
+```
 
- On Windows: 👇🏻
+For Windows 👇🏻:
 
+```bash
 venv\Scripts\activate
 ```
 
