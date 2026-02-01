@@ -1,11 +1,260 @@
-<h2>Register</h2>
-<form method="post">
-  <input name="username" placeholder="Username" required><br><br>
-  <input name="password" type="password" placeholder="Password" required><br><br>
-  <select name="role">
-    <option value="user">User</option>
-    <option value="admin">Admin</option>
-  </select><br><br>
-  <button>Register</button>
-</form>
-<a href="/login">Login</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Registration | Cybersecurity Project</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            padding: 20px;
+        }
+        
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 40px;
+        }
+        
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 28px;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            margin-bottom: 30px;
+            font-size: 14px;
+        }
+        
+        .alert {
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            font-size: 14px;
+            text-align: center;
+        }
+        
+        .alert-danger {
+            background-color: #f8d7da;
+            color: #721c24;
+            border: 1px solid #f5c6cb;
+        }
+        
+        .alert-success {
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #555;
+            font-weight: 500;
+        }
+        
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #e1e5e9;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: border-color 0.3s;
+        }
+        
+        input:focus {
+            outline: none;
+            border-color: #f5576c;
+        }
+        
+        .btn {
+            width: 100%;
+            padding: 14px;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+        
+        .btn:hover {
+            transform: translateY(-2px);
+        }
+        
+        .password-rules {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 12px;
+            color: #666;
+        }
+        
+        .password-rules h3 {
+            color: #333;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+        
+        .password-rules ul {
+            padding-left: 20px;
+        }
+        
+        .password-rules li {
+            margin-bottom: 5px;
+        }
+        
+        .password-rules li.valid {
+            color: #28a745;
+        }
+        
+        .password-rules li.invalid {
+            color: #dc3545;
+        }
+        
+        .links {
+            text-align: center;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .links a {
+            color: #f5576c;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        .links a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="card">
+            <h1>📝 Secure Registration</h1>
+            <p class="subtitle">Create a new account with enhanced security</p>
+            
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">{{ message }}</div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            
+            <div class="password-rules">
+                <h3>🔐 Password Requirements:</h3>
+                <ul id="passwordRules">
+                    <li id="rule-length" class="invalid">Minimum 12 characters</li>
+                    <li id="rule-upper" class="invalid">At least one uppercase letter</li>
+                    <li id="rule-lower" class="invalid">At least one lowercase letter</li>
+                    <li id="rule-digit" class="invalid">At least one digit</li>
+                    <li id="rule-special" class="invalid">At least one special character</li>
+                </ul>
+            </div>
+            
+            <form method="POST" action="{{ url_for('register') }}" id="registerForm">
+                <div class="form-group">
+                    <label for="username">Username:</label>
+                    <input type="text" id="username" name="username" required 
+                           pattern="[A-Za-z0-9_]{3,20}"
+                           title="3-20 characters, letters, numbers, and underscores only">
+                </div>
+                
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="password">Password:</label>
+                    <input type="password" id="password" name="password" required 
+                           minlength="12" onkeyup="validatePassword()">
+                </div>
+                
+                <div class="form-group">
+                    <label for="confirm_password">Confirm Password:</label>
+                    <input type="password" id="confirm_password" name="confirm_password" required 
+                           minlength="12" onkeyup="checkPasswordMatch()">
+                    <small id="passwordMatch" style="display:none;color:#28a745;">✓ Passwords match</small>
+                    <small id="passwordNoMatch" style="display:none;color:#dc3545;">✗ Passwords do not match</small>
+                </div>
+                
+                <button type="submit" class="btn">Register</button>
+            </form>
+            
+            <div class="links">
+                <p>Already have an account? <a href="{{ url_for('login') }}">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function validatePassword() {
+            const password = document.getElementById('password').value;
+            
+            document.getElementById('rule-length').className = 
+                password.length >= 12 ? 'valid' : 'invalid';
+            
+            document.getElementById('rule-upper').className = 
+                /[A-Z]/.test(password) ? 'valid' : 'invalid';
+            
+            document.getElementById('rule-lower').className = 
+                /[a-z]/.test(password) ? 'valid' : 'invalid';
+            
+            document.getElementById('rule-digit').className = 
+                /\d/.test(password) ? 'valid' : 'invalid';
+            
+            document.getElementById('rule-special').className = 
+                /[!@#$%^&*(),.?":{}|<>]/.test(password) ? 'valid' : 'invalid';
+            
+            checkPasswordMatch();
+        }
+        
+        function checkPasswordMatch() {
+            const password = document.getElementById('password').value;
+            const confirm = document.getElementById('confirm_password').value;
+            
+            if (password && confirm) {
+                if (password === confirm) {
+                    document.getElementById('passwordMatch').style.display = 'block';
+                    document.getElementById('passwordNoMatch').style.display = 'none';
+                } else {
+                    document.getElementById('passwordMatch').style.display = 'none';
+                    document.getElementById('passwordNoMatch').style.display = 'block';
+                }
+            }
+        }
+    </script>
+</body>
+</html>
