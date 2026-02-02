@@ -164,16 +164,24 @@ Application Structure
 
 ```
 secure-web-app/
+│
 ├── app.py                    # Main Flask application
 ├── requirements.txt          # Python dependencies
-├── database.db              # SQLite database (auto-generated)
-├── README.md                # This documentation
-└── templates/               # HTML templates
-    ├── login.html           # Login page
-    ├── register.html        # Registration page
-    ├── dashboard.html       # User dashboard
-    ├── error.html           # error handle
-    └── admin.html           # Admin dashboard
+├── database.db               # SQLite database (Auto Generated)
+├── README.md                 # Project documentation
+│
+├── templates/                # HTML templates
+│   ├── login.html            # Login page
+│   ├── register.html         # Registration page
+│   ├── dashboard.html        # User dashboard
+│   ├── admin.html            # Admin dashboard
+│   └── error.html            # Error handling page
+│
+└── screenshots/              # Application screenshots
+    ├── register.png
+    ├── login.png
+    ├── user_dashboard.png
+    └── admin_dashboard.png
 ```
 
 Key Security Functions
