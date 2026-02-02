@@ -180,8 +180,8 @@ secure-web-app/
 └── screenshots/              # Application screenshots
     ├── register.png
     ├── login.png
-    ├── user_dashboard.png
-    └── admin_dashboard.png
+    ├── User_dashboard.png
+    └── Admin_dashboard.png
 ```
 
 Key Security Functions
