@@ -304,6 +304,9 @@ The application is ready to run immediately and serves as an excellent learning 
 ### Registration Page
 ![Registration Page](screenshots/register.png)
 
+### Error Page
+![Error Page](screenshots/error.png)
+
 ### Admin Security Dashboard
 ![Admin Security Dashboard](screenshots/admin_sec_dash.png)
 
