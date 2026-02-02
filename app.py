@@ -269,15 +269,30 @@ def login():
     # Check if user is already logged in
     if 'user_id' in session:
         return redirect(url_for('dashboard'))
-    
+
     if request.method == 'POST':
         # Sanitize inputs
         username = sanitize_input(request.form.get('username', ''))
         password = request.form.get('password', '')
-        
+
         if not username or not password:
             flash('Please enter username and password', 'danger')
             return render_template('login.html')
+
+        # --- Check credentials from DB ---
+        user = get_user_from_db(username)  # Tumhara DB fetch function
+        if user and check_password(user.password, password):
+            # Successful login
+            session['user_id'] = user.id        # Agar already use ho raha hai
+            session['username'] = user.username  # <-- Yahan add karo
+
+            return redirect(url_for('dashboard'))
+        else:
+            flash('Invalid credentials', 'danger')
+            return render_template('login.html')
+
+    return render_template('login.html')
+
         
         conn = get_db()
         
