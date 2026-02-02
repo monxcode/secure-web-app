@@ -161,7 +161,6 @@ python app.py
 
 · **Open browser:** http://localhost:5000 <br>
 · **Default admin credentials:** admin / Admin@Secure123 <br>
--> **Demo Visualization** <br> "https://github.com/monxcode/secure-web-app/tree/main/screenshots"
 
 Application Structure
 
