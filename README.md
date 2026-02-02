@@ -172,6 +172,7 @@ secure-web-app/
     ├── login.html           # Login page
     ├── register.html        # Registration page
     ├── dashboard.html       # User dashboard
+    ├── error.html           # error handle
     └── admin.html           # Admin dashboard
 ```
 
