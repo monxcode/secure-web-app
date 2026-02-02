@@ -269,30 +269,15 @@ def login():
     # Check if user is already logged in
     if 'user_id' in session:
         return redirect(url_for('dashboard'))
-
+    
     if request.method == 'POST':
         # Sanitize inputs
         username = sanitize_input(request.form.get('username', ''))
         password = request.form.get('password', '')
-
+        
         if not username or not password:
             flash('Please enter username and password', 'danger')
             return render_template('login.html')
-
-        # --- Check credentials from DB ---
-        user = get_user_from_db(username)  # Tumhara DB fetch function
-        if user and check_password(user.password, password):
-            # Successful login
-            session['user_id'] = user.id        # Agar already use ho raha hai
-            session['username'] = user.username  # <-- Yahan add karo
-
-            return redirect(url_for('dashboard'))
-        else:
-            flash('Invalid credentials', 'danger')
-            return render_template('login.html')
-
-    return render_template('login.html')
-
         
         conn = get_db()
         
@@ -470,15 +455,13 @@ def change_password():
 @app.errorhandler(404)
 def page_not_found(e):
     """Custom 404 error handler"""
-    return render_template('error.html', error="Page not found"), 404
+    return render_template('dashboard.html', error="Page not found"), 404
 
 @app.errorhandler(500)
 def internal_server_error(e):
-    return render_template(
-        'dashboard.html',
-        username="Unknown",
-        error="Internal server error"
-    ), 500
+    """Custom 500 error handler without leaking information"""
+    log_security_event(session.get('user_id'), 'SERVER_ERROR', str(e))
+    return render_template('dashboard.html', error="Internal server error"), 500
 
 # SECURITY HEADERS MIDDLEWARE
 
@@ -496,12 +479,11 @@ def add_security_headers(response):
 if __name__ == '__main__':
     # Initialize database
     init_db()
-
-    # Enable debug mode for development
-    # This will show detailed error messages in terminal
+    
+    # Run with production settings
     app.run(
-        debug=True,          # Debug ON to see exact errors
-        host='127.0.0.1',    # Localhost for testing
-        port=5000            # Default Flask port
-        # ssl_context='adhoc' # Comment out for local debugging
+        debug=False,  # Debug should be False in production
+        host='0.0.0.0',
+        port=5000,
+        ssl_context='adhoc'  # Enable HTTPS in production with proper certificates
     )
