@@ -455,13 +455,13 @@ def change_password():
 @app.errorhandler(404)
 def page_not_found(e):
     """Custom 404 error handler"""
-    return render_template('dashboard.html', error="Page not found"), 404
+    return render_template('error.html', error="Page not found"), 404
 
 @app.errorhandler(500)
 def internal_server_error(e):
     """Custom 500 error handler without leaking information"""
     log_security_event(session.get('user_id'), 'SERVER_ERROR', str(e))
-    return render_template('dashboard.html', error="Internal server error"), 500
+    return render_template('error.html', error="Internal server error"), 500
 
 # SECURITY HEADERS MIDDLEWARE
 
