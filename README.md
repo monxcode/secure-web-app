@@ -160,7 +160,8 @@ python app.py
 6. Access the application:
 
 · **Open browser:** http://localhost:5000 <br>
-· **Default admin credentials:** admin / Admin@Secure123
+· **Default admin credentials:** admin / Admin@Secure123 <br>
+-> **Demo** "https://github.com/monxcode/secure-web-app/tree/main/screenshots"
 
 Application Structure
 
