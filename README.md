@@ -1,5 +1,5 @@
-### INTERNSHIP PROJECT [ **1st** ]
- ### At **@Cryptonic Area**
+## INTERNSHIP PROJECT [ **1st** ]
+ 
 ----
 
 # Secure Web Application & Threat Hardening
