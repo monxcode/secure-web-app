@@ -295,3 +295,21 @@ This complete secure web application demonstrates:
 7. **Secure Headers:** CSP, HSTS, X-Frame-Options, etc.
 
 The application is ready to run immediately and serves as an excellent learning tool for understanding web application security principles. Each security control is clearly commented and explained in the code.
+
+
+## Application Screenshots
+
+### Login Page
+![Login Page](screenshots/login.png)
+
+### Registration Page
+![Registration Page](screenshots/register.png)
+
+### Admin Security Dashboard
+![Admin Security Dashboard](screenshots/admin_sec_dash.png)
+
+### User Dashboard
+![User Dashboard](screenshots/User_dashboard.png)
+
+### Admin Dashboard
+![Admin Dashboard](screenshots/Admin_dashboard.png)
