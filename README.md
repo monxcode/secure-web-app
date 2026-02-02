@@ -1,6 +1,5 @@
 ## INTERNSHIP PROJECT [ **1st** ]
- 
-----
+
 
 # Secure Web Application & Threat Hardening
 
