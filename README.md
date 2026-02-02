@@ -314,5 +314,5 @@ The application is ready to run immediately and serves as an excellent learning 
 ### Admin Dashboard
 ![Admin Dashboard](screenshots/Admin_dashboard.png)
 
-### Working
+### Terminal + Browser
 ![Terminal + Browser](screenshots/post.png)
