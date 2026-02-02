@@ -481,11 +481,12 @@ def add_security_headers(response):
 if __name__ == '__main__':
     # Initialize database
     init_db()
-    
-    # Run with production settings
+
+    # Enable debug mode for development
+    # This will show detailed error messages in terminal
     app.run(
-        debug=False,  # Debug should be False in production
-        host='0.0.0.0',
-        port=5000,
-        ssl_context='adhoc'  # Enable HTTPS in production with proper certificates
+        debug=True,          # Debug ON to see exact errors
+        host='127.0.0.1',    # Localhost for testing
+        port=5000            # Default Flask port
+        # ssl_context='adhoc' # Comment out for local debugging
     )
