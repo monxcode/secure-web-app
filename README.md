@@ -180,7 +180,9 @@ secure-web-app/
 └── screenshots/              # Application screenshots
     ├── register.png
     ├── login.png
+    ├── post.png
     ├── User_dashboard.png
+    ├── Admin_sec_dash.png
     └── Admin_dashboard.png
 ```
 
