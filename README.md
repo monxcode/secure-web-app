@@ -121,9 +121,9 @@ Input Sanitization → Business Logic → Secure Response → Audit Logging
 git clone https://github.com/monxcode/secure-web-app.git
 ```
 2. Enter Directory:
-'''bash
+```bash
 cd secure-web-app
-'''
+```
 
 3. Create virtual environment:
 
