@@ -301,6 +301,8 @@ This complete secure web application demonstrates:
 
 The application is ready to run immediately and serves as an excellent learning tool for understanding web application security principles. Each security control is clearly commented and explained in the code.
 
+----
+
 ## What I Learned During This Project
 
 During the development of this Secure Web Application, I gained strong practical understanding of real-world cybersecurity and secure development practices. Key learnings include:
@@ -322,6 +324,8 @@ During the development of this Secure Web Application, I gained strong practical
 - Following secure development lifecycle best practices
 
 This project helped me bridge the gap between theoretical cybersecurity concepts and their practical implementation in a real web application.
+
+----
 
 ## Application Screenshots
 
