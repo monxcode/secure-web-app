@@ -120,7 +120,7 @@ Input Sanitization → Business Logic → Secure Response → Audit Logging
 ```bash
 git clone https://github.com/monxcode/secure-web-app.git
 ```
-2. Enter Directory:
+2. Move into the project directory:
 ```bash
 cd secure-web-app
 ```
