@@ -294,6 +294,27 @@ This complete secure web application demonstrates:
 
 The application is ready to run immediately and serves as an excellent learning tool for understanding web application security principles. Each security control is clearly commented and explained in the code.
 
+## What I Learned During This Project
+
+During the development of this Secure Web Application, I gained strong practical understanding of real-world cybersecurity and secure development practices. Key learnings include:
+
+- How authentication and authorization systems work internally
+- Implementing **Role-Based Access Control (RBAC)** for users and admins
+- Secure password handling using **bcrypt hashing and salting**
+- Designing and enforcing **strong password policies**
+- Preventing **SQL Injection** using parameterized queries
+- Protecting applications against **Cross-Site Scripting (XSS)** attacks
+- Importance of **input validation and sanitization**
+- Secure **session management** (timeouts, regeneration, secure cookies)
+- Implementing **security headers** like CSP, HSTS, X-Frame-Options
+- Handling errors securely without leaking sensitive information
+- Logging and monitoring **security events** for auditing
+- Applying **Defense in Depth** security strategy
+- Understanding common web threats and their mitigations
+- Writing cleaner, more secure, and maintainable backend code
+- Following secure development lifecycle best practices
+
+This project helped me bridge the gap between theoretical cybersecurity concepts and their practical implementation in a real web application.
 
 ## Application Screenshots
 
