@@ -120,8 +120,12 @@ Input Sanitization → Business Logic → Secure Response → Audit Logging
 ```bash
 git clone https://github.com/monxcode/secure-web-app.git
 ```
+2. Enter Directory:
+'''bash
+cd secure-web-app
+'''
 
-2. Create virtual environment:
+3. Create virtual environment:
 
 ```bash
 python -m venv venv
@@ -140,26 +144,26 @@ source venv/bin/activate
 venv\Scripts\activate
 ```
 
-3. Install dependencies:
+4. Install dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-4. Initialize the database:
+5. Initialize the database:
 
 ```bash
 python app.py
 # The app will create database.db with initial schema
 ```
 
-5. Run the application:
+6. Run the application:
 
 ```bash
 python app.py
 ```
 
-6. Access the application:
+7. Access the application:
 
 · **Open browser:** http://localhost:5000 <br>
 · **Default admin credentials:** admin / Admin@Secure123 <br>
