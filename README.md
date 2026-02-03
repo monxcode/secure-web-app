@@ -1,6 +1,7 @@
 ## INTERNSHIP PROJECT [ **1st** ]
 
-**Organization:** Cryptonic Area 
+**Organization:** Cryptonic Area  
+**Duration:** February 2026
 
 
 # Secure Web Application & Threat Hardening
