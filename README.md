@@ -169,7 +169,7 @@ python app.py
 · **Default admin credentials:** admin / Admin@Secure123 <br>
 
 ## Application Structure
-----
+
 
 ```
 secure-web-app/
