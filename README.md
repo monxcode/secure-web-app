@@ -151,10 +151,10 @@ pip install -r requirements.txt
 ```
 
 5. **Initialize the database:**
+##### The app will create database.db with initial schema
 
 ```bash
 python app.py
-# The app will create database.db with initial schema
 ```
 
 6. **Run the application:**
