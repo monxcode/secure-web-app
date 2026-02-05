@@ -168,7 +168,7 @@ python app.py
 · **Open browser:** http://localhost:5000 <br>
 · **Default admin credentials:** admin / Admin@Secure123 <br>
 
-Application Structure
+### Application Structure
 
 ```
 secure-web-app/
