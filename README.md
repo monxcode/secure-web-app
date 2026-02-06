@@ -218,8 +218,8 @@ python app.py
 
 7. **Access the application:**
 
-· **Open browser:** http://localhost:5000 <br>
-· **Default admin credentials:** admin / Admin@Secure123 <br>
+- **Open browser:** http://localhost:5000 <br>
+- **Default admin credentials:** admin / Admin@Secure123 <br>
 
 ## Application Structure
 
