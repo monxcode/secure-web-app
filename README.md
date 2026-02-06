@@ -16,19 +16,25 @@ A cybersecurity-focused web application built for learning defensive security pr
 ## Security Features Implemented
 
 ### 1. Authentication & Authorization
-- **User Registration & Login:** Secure account creation and authentication
-- **Role-Based Access Control (RBAC):** User and Admin roles with different privileges
-- **Session Management:** Secure session handling with timeout (30 minutes)
+- **User Registration & Login:**
+  - Secure account creation and authentication
+- **Role-Based Access Control (RBAC):**
+  - User and Admin roles with different privileges
+- **Session Management:**
+  - Secure session handling with timeout (30 minutes)
 
 ### 2. Password Security
-- **bcrypt Hashing:** Passwords stored using bcrypt with unique salts
+- **bcrypt Hashing:**
+  - Passwords stored using **bcrypt** with unique salts
 - **Strong Password Policy:**
   - Minimum 12 characters
   - Mixed case letters
   - Numbers and special characters
   - Common pattern detection
-- **Account Lockout:** 5 failed attempts lock account for 5 minutes
-- **Password Change:** Secure password update mechanism
+- **Account Lockout:**
+  - 5 failed attempts lock account for 5 minutes
+- **Password Change:**
+  - Secure password update mechanism
 
 ### 3. Input Validation & Sanitization
 - **SQL Injection Prevention:**
@@ -39,7 +45,8 @@ A cybersecurity-focused web application built for learning defensive security pr
   - HTML entity encoding
   - Input sanitization on server-side
   - Content Security Policy headers
-- **Email Validation:** Proper email format verification
+- **Email Validation:**
+  - Proper email format verification
 
 ### 4. Session Security
 - **Secure Cookies:** HTTP-only, secure flags
@@ -54,9 +61,12 @@ A cybersecurity-focused web application built for learning defensive security pr
   - X-Content-Type-Options: nosniff
   - Strict-Transport-Security
   - X-XSS-Protection
-- **Audit Logging:** All security events logged
-- **Error Handling:** Generic error messages (no information leakage)
-- **Database Security:** Least privilege principle in schema design
+- **Audit Logging:**
+  - All security events logged
+- **Error Handling:**
+  - Generic error messages (no information leakage)
+- **Database Security:**
+  - Least privilege principle in schema design
 
 ## Threats and Mitigations
 
@@ -75,12 +85,24 @@ A cybersecurity-focused web application built for learning defensive security pr
 
 ### Security Layers:
 
-1. **Perimeter Defense:** Security headers, rate limiting
-2. **Authentication Layer:** Strong password hashing, session management
-3. **Authorization Layer:** Role-based access control
-4. **Input Validation Layer:** Sanitization, validation, encoding
-5. **Data Layer:** Parameterized queries, prepared statements
-6. **Monitoring Layer:** Audit logging, security event tracking
+1. **Perimeter Defense:**
+  - Security headers
+  - Rate limiting
+3. **Authentication Layer:**
+ - Strong password hashing
+ - Session management
+4. **Authorization Layer:**
+ - Role-based access control
+5. **Input Validation Layer:**
+ - Sanitization
+ - Validation
+ - Encoding
+6. **Data Layer:**
+ - Parameterized queries
+ - Prepared statements
+7. **Monitoring Layer:**
+ - Audit logging
+ - Security event tracking
 
 ## Application Flow
 
@@ -269,7 +291,7 @@ secure-web-app/
 
 #### For Production Deployment
 
-## ⚠️ Important Security Notes:
+## Important Security Notes ⚠️
 
 1. Change default admin password immediately
 2. Enable HTTPS with proper certificates
