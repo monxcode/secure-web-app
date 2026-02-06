@@ -113,8 +113,6 @@ Input Sanitization → Business Logic → Secure Response → Audit Logging
 ### Prerequisites
 - Python 3.8+
 - pip package manager
-###### In case of any issues, install dependencies using:
-- pip install -r requirements.txt
   - flask
   - bcrypt
   - Werkzeug
