@@ -151,6 +151,16 @@ winget install Python.Python.3
   - flask
   - bcrypt
   - Werkzeug
+    
+-> For Windows 👇🏻:
+```bash
+py -m pip install flask bcrypt werkzeug
+```
+
+-> For Linux 👇🏻:
+```bash
+python3 -m pip install flask bcrypt werkzeug
+```
 
 ### Installation Steps
 
