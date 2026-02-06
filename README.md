@@ -112,6 +112,19 @@ Input Sanitization → Business Logic → Secure Response → Audit Logging
 
 ### Prerequisites
 - Python 3.8+
+  - Install Python
+
+-> For Linux 👇🏻:
+```bash
+sudo apt update
+sudo apt install python3 python3-pip -y
+```
+
+-> For Windows 👇🏻:
+```bash
+winget install Python.Python.3
+```
+
 - pip package manager
   - flask
   - bcrypt
@@ -222,7 +235,7 @@ Adds security headers to all HTTP responses.
 
 Testing Security Features
 
-Manual Testing Checklist:
+## Manual Testing Checklist:
 
 1. Authentication:
    · Register with weak password (should fail)
@@ -241,7 +254,7 @@ Manual Testing Checklist:
    · Test logout functionality
    · Verify session regeneration
 
-Best Practices Demonstrated
+## Best Practices Demonstrated
 
 1. Never store plain-text passwords
 2. Always use parameterized queries
@@ -254,22 +267,42 @@ Best Practices Demonstrated
 9. Handle errors securely
 10. Keep dependencies updated
 
-For Production Deployment
+#### For Production Deployment
 
-⚠️ Important Security Notes:
+## ⚠️ Important Security Notes:
 
 1. Change default admin password immediately
 2. Enable HTTPS with proper certificates
 3. Set debug=False in production
 4. Use environment variables for secrets
 5. Implement additional logging
-6. Add rate limiting
+6.  Add rate limiting
 7. Regular security audits
 8. Keep Flask and dependencies updated
 
-Learning Outcomes
+### Additional Recommendations:
+9. Use strong password hashing (bcrypt)
+10. Implement proper input validation and sanitization
+11. Protect against CSRF and XSS attacks
+12. Restrict admin panel access (IP or role-based)
+13. Use secure session cookies
+14. Disable unnecessary services and ports
+15. Backup the database securely and regularly
 
-This project provides hands-on experience with:
+## Learning Outcomes:
+
+- Understood secure authentication and authorization concepts
+- Implemented password hashing using bcrypt
+- Gained hands-on experience with Flask framework
+- Learned secure session and cookie management
+- Applied role-based access control (Admin/User)
+- Implemented basic input validation and error handling
+- Understood importance of environment variables for security
+- Learned secure project structure and deployment practices
+- Improved GitHub documentation and version control workflow
+
+
+## This project provides hands-on experience with:
 
 · Secure authentication and authorization
 · Password security best practices
@@ -281,11 +314,11 @@ This project provides hands-on experience with:
 · Audit logging and monitoring
 · Secure error handling
 
-License
+## License
 
 Educational Use - Cybersecurity Learning Project
 
-Disclaimer
+## Disclaimer
 
 This project is for educational purposes only. Always consult security professionals and conduct thorough penetration testing before deploying applications to production.
 
@@ -293,7 +326,7 @@ This project is for educational purposes only. Always consult security professio
 
 ## **Project Summary**
 
-This complete secure web application demonstrates:
+#### This complete secure web application demonstrates:
 
 1. **Authentication Security:** bcrypt hashing, strong password policies, account lockout
 2. **Authorization:** Role-based access control with user/admin separation
@@ -303,13 +336,13 @@ This complete secure web application demonstrates:
 6. **Monitoring:** Comprehensive audit logging of security events
 7. **Secure Headers:** CSP, HSTS, X-Frame-Options, etc.
 
-The application is ready to run immediately and serves as an excellent learning tool for understanding web application security principles. Each security control is clearly commented and explained in the code.
+#### The application is ready to run immediately and serves as an excellent learning tool for understanding web application security principles. Each security control is clearly commented and explained in the code.
 
 ----
 
 ## What I Learned During This Project
 
-During the development of this Secure Web Application, I gained strong practical understanding of real-world cybersecurity and secure development practices. Key learnings include:
+#### During the development of this Secure Web Application, I gained strong practical understanding of real-world cybersecurity and secure development practices. Key learnings include:
 
 - How authentication and authorization systems work internally
 - Implementing **Role-Based Access Control (RBAC)** for users and admins
@@ -327,7 +360,7 @@ During the development of this Secure Web Application, I gained strong practical
 - Writing cleaner, more secure, and maintainable backend code
 - Following secure development lifecycle best practices
 
-This project helped me bridge the gap between theoretical cybersecurity concepts and their practical implementation in a real web application.
+#### This project helped me bridge the gap between theoretical cybersecurity concepts and their practical implementation in a real web application.
 
 ----
 
