@@ -211,48 +211,48 @@ secure-web-app/
     └── Admin_dashboard.png
 ```
 
-Key Security Functions
+## Key Security Functions
 
-validate_password(password)
+- validate_password(password)
 
-Enforces strong password policy and checks for common weak patterns.
+- Enforces strong password policy and checks for common weak patterns.
 
-sanitize_input(input_string)
+- sanitize_input(input_string)
 
-Prevents XSS by encoding HTML entities and removing dangerous characters.
+- Prevents XSS by encoding HTML entities and removing dangerous characters.
 
-is_sql_safe(input_string)
+- is_sql_safe(input_string)
 
-Checks for SQL injection patterns using keyword and special character detection.
+- Checks for SQL injection patterns using keyword and special character detection.
 
-log_security_event(user_id, event_type, details)
+- log_security_event(user_id, event_type, details)
 
-Logs security events for audit trail and monitoring.
+- Logs security events for audit trail and monitoring.
 
-add_security_headers(response)
+- add_security_headers(response)
 
-Adds security headers to all HTTP responses.
+- Adds security headers to all HTTP responses.
 
-Testing Security Features
+- Testing Security Features
 
 ## Manual Testing Checklist:
 
-1. Authentication:
-   · Register with weak password (should fail)
-   · Login with invalid credentials (account should lock after 5 attempts)
-   · Session timeout after 30 minutes of inactivity
-2. Authorization:
-   · User cannot access admin dashboard
-   · Admin can access all areas
-   · Unauthenticated users redirected to login
-3. Input Validation:
-   · Try SQL injection in form fields
-   · Attempt XSS payload injection
-   · Test special character handling
-4. Session Security:
-   · Copy session cookie (should be invalid)
-   · Test logout functionality
-   · Verify session regeneration
+#### 1. Authentication: <br>
+   - Register with weak password (should fail) <br>
+   - Login with invalid credentials (account should lock after 5 attempts) <br>
+   - Session timeout after 30 minutes of inactivity <br>
+#### 2. Authorization: <br>
+   - User cannot access admin dashboard <br>
+   - Admin can access all areas <br>
+   - Unauthenticated users redirected to login <br>
+#### 3. Input Validation: <br>
+   - Try SQL injection in form fields <br>
+   - Attempt XSS payload injection <br>
+   - Test special character handling <br>
+#### 4. Session Security: <br>
+   - Copy session cookie (should be invalid) <br>
+   - Test logout functionality <br>
+   - Verify session regeneration <br>
 
 ## Best Practices Demonstrated
 
