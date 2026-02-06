@@ -91,23 +91,23 @@ A cybersecurity-focused web application built for learning defensive security pr
 ## Security Layers:
 
 1. **Perimeter Defense:**
-  - Security headers
-  - Rate limiting
+   - Security headers
+   - Rate limiting
 3. **Authentication Layer:**
- - Strong password hashing
- - Session management
+   - Strong password hashing
+   - Session management
 4. **Authorization Layer:**
- - Role-based access control
+   - Role-based access control
 5. **Input Validation Layer:**
- - Sanitization
- - Validation
- - Encoding
+   - Sanitization
+   - Validation
+   - Encoding
 6. **Data Layer:**
- - Parameterized queries
- - Prepared statements
+   - Parameterized queries
+   - Prepared statements
 7. **Monitoring Layer:**
- - Audit logging
- - Security event tracking
+   - Audit logging
+   - Security event tracking
 
 ## Application Flow
 
