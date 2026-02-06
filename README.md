@@ -113,7 +113,7 @@ Input Sanitization → Business Logic → Secure Response → Audit Logging
 ### Prerequisites
 - Python 3.8+
 - pip package manager
-#### If issue othervise auto install in "pip insrequirements.txt"
+##### If issue othervise auto install in "pip insrequirements.txt"
 - flask
 - bcrypt
 - Werkzeug
