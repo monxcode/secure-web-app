@@ -341,15 +341,15 @@ secure-web-app/
 
 ## This project provides hands-on experience with:
 
-· Secure authentication and authorization
-· Password security best practices
-· Input validation and sanitization
-· Session management security
-· SQL injection prevention
-· XSS protection
-· Security headers implementation
-· Audit logging and monitoring
-· Secure error handling
+- Secure authentication and authorization
+- Password security best practices
+- Input validation and sanitization
+- Session management security
+- SQL injection prevention
+- XSS protection
+- Security headers implementation
+- Audit logging and monitoring
+- Secure error handling
 
 ## License
 
