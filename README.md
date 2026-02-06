@@ -49,10 +49,15 @@ A cybersecurity-focused web application built for learning defensive security pr
   - Proper email format verification
 
 ### 4. Session Security
-- **Secure Cookies:** HTTP-only, secure flags
-- **Session Fixation Prevention:** Regeneration on login
-- **Timeout:** Automatic session expiration
-- **Forced Re-authentication:** For sensitive operations
+- **Secure Cookies:**
+  - HTTP-only
+  - Secure flags
+- **Session Fixation Prevention:**
+  - Regeneration on login
+- **Timeout:**
+  - Automatic session expiration
+- **Forced Re-authentication:**
+  - For sensitive operations
 
 ### 5. Additional Security Controls
 - **Security Headers:**
@@ -83,7 +88,7 @@ A cybersecurity-focused web application built for learning defensive security pr
 | **CSRF** | State-changing operations require authentication |
 | **Clickjacking** | X-Frame-Options: DENY header |
 
-### Security Layers:
+## Security Layers:
 
 1. **Perimeter Defense:**
   - Security headers
