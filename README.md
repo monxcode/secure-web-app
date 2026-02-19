@@ -1,4 +1,4 @@
-## INTERNSHIP PROJECT [ **1st** ]
+## INTERNSHIP PROJECT [ **01** ]
 
 **Organization:** Cryptonic Area  
 **Duration:** 1 - 8 February 2026
